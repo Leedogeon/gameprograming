@@ -10,7 +10,7 @@ typedef struct
 }trump;
 void make_card(trump m_card[]){
 	int i,j;
-	char shape[4][3] = { "¢º", "°ﬂ", "¢æ", "¢¿" };
+	char shape[4][3] = { "‚ô†", "‚óÜ", "‚ô•", "‚ô£" };
 	for (i = 0; i < 4; i++){
 		for (j = i * 13; j < i * 13 + 13; j++){
 			m_card[j].order = i;
@@ -45,9 +45,9 @@ void display_card(trump m_card[]){
 	for (i = 0; i < 5; i++){
     	printf("%s", m_card[i].shape);
     	if (10 < m_card[i].number)
-    		printf("%-2c ", m_card[i].number);
+    		printf("%-2c\n", m_card[i].number);
     	else
-    		printf("%-2d ", m_card[i].number);
+    		printf("%-2d\n", m_card[i].number);
     }
 }
 int main(void)
@@ -57,8 +57,8 @@ int main(void)
 	make_card(card);
 	shuffle_card(card);
 	for (i = 0; i < 5; i++)
-		show[i] = card[i]; //¿”¿«∑Œ ƒ´µÂ 5¿Â ªÃ±‚
-		for (i = 0; i < 4; i++){ //∏æÁ∫Œ≈Õ º¯º≠¥Î∑Œ
+		show[i] = card[i]; //ÏûÑÏùòÎ°ú Ïπ¥Îìú 5Ïû• ÎΩëÍ∏∞
+		for (i = 0; i < 4; i++){ //Î™®ÏñëÎ∂ÄÌÑ∞ ÏàúÏÑúÎåÄÎ°ú
 			for (j = 0; j < 4 - i; j++){
 				if (show[j].order > show[j + 1].order){
 					trump temp = show[j + 1];
@@ -67,7 +67,7 @@ int main(void)
 				}
 			}
 		}
-	for (i = 0; i < 4; i++){ //º˝¿⁄ ¡§∑ƒ
+	for (i = 0; i < 4; i++){ //Ïà´Ïûê Ï†ïÎ†¨
 		for (j = 0; j < 4 - i; j++){
 			if ((show[j + 1].order == show[j].order) && (show[j + 1].number < show[j].number)){
 				trump temp = show[j + 1];
@@ -76,11 +76,11 @@ int main(void)
 			}
 		}
 	}
-	for (i = 0; i < 4; i++){ //∏æÁ¿∫ ¥Ÿ∏£¡ˆ∏∏ ∞∞¿∫ º˝¿⁄¿Œ ∞ÊøÏ
+	for (i = 0; i < 4; i++){ //Î™®ÏñëÏùÄ Îã§Î•¥ÏßÄÎßå Í∞ôÏùÄ Ïà´ÏûêÏù∏ Í≤ΩÏö∞
 		for (j = 1; j < 5; j++)
 			{
-				if (show[i].number == show[j].number){ //º˝¿⁄∞° ∞∞¿∏∏È
-					for (k = j; k > i + 1; k--){ //∫Ÿ¿Œ¥Ÿ
+				if (show[i].number == show[j].number){ //Ïà´ÏûêÍ∞Ä Í∞ôÏúºÎ©¥
+					for (k = j; k > i + 1; k--){ //Î∂ôÏù∏Îã§
 						trump temp = show[k];
 						show[k] = show[k - 1];
 						show[k - 1] = temp;
@@ -92,4 +92,3 @@ int main(void)
 	printf("\n");
 	return 0;
 }
-
