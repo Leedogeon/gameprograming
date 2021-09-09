@@ -1,0 +1,15 @@
+2주차 강의내용
+
+scanCode.c  => 입력받은 값의 아스키코드값을 알려줌
+moveArrow.c => 방향키의 아스키코드값을 이용해 좌표이동
+square.c => 사각형을 그리는 코드
+menu.c => 실행시 메뉴판 출력, 설정된 숫자 입력에따라 메뉴의 레시피 출력
+menu2.c => 함수호출로 메뉴판 출력
+rand1.c => srand(time(NULL)) - time(NULL)가 있는곳은 시드값 자리로
+	특정 수를 입력하면 정해진 패턴이 출력
+	rand()%A - 난수생성함수
+rand3.c => 중복제거 중복발생시 한번더 rand
+rand4.c => rand4.c에서 발생된 난수를 정렬함
+
+trump pick5 => 트럼프카드 52장을 만들고 그중에 랜덤하게 5장을 뽑는코드
+		출처 - https://jaimemin.tistory.com/137
