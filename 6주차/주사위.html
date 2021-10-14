@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캔버스 그리기 맛보기</title></head>
+<body>
+<h3>캔버스 그리기 맛보기</h3>
+<hr>
+<canvas id="myCanvas" style="background-color:white"
+	    width="1000" height="1000"></canvas>
+<script>
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+    context.beginPath(); //빈 경로 구성
+    for(var i=0; i<6; i++) {
+    if(i<3){
+    context.rect(30+i*300, 30, 200,200);
+    }
+    else {
+        context.rect(30+(i%3)*300, 300, 200,200);
+        }
+    }
+    //context.rect(30,30, 200,200);
+    context.strokeStyle="black"; // 선의색
+    context.stroke(); // 사각형을 캔버스에 그린다
+
+
+	context.beginPath(); // 빈 경로 만들기	
+	context.arc(125, 125, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+/////////////////////////////////////////////////////////
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(380, 90, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(470, 160, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+/////////////////////////////////////////////////////////
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(680, 75, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(725, 125, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(770, 175, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+/////////////////////////////////////////////////////////
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(85, 360, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(85, 440, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(175, 360, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(175, 440, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+/////////////////////////////////////////////////////////
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(385, 360, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(385, 440, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(475, 360, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(475, 440, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(430,400, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+/////////////////////////////////////////////////////////
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(685, 340, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(685, 400, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(685, 460, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(775, 340, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(775, 400, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+    context.beginPath(); // 빈 경로 만들기	
+	context.arc(775, 460, 15, 0, 2*Math.PI, false); // 시계 방향
+    context.fill();
+	context.stroke(); // 경로에 있는 원호를 그린다
+</script>			 
+</body>
+</html>
