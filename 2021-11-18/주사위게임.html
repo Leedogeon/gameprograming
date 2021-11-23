@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<html lang ="ko">
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="style5.css">
+		<title>주사위게임</title>
+		<div>
+            <!-- 출처1번 글접고 펼치기-->
+            <a href=#none id="show" onclick="if(hide.style.display=='none')
+            {hide.style.display='';show.innerText='▲접기'}
+            else {hide.style.display='none';show.innerText='▶설명'}">▶설명</a>
+            <div id="hide" style="display: none">
+            주사위 2개를굴려 합이 높은사람이 이기는 게임입니다. <br />
+            THROW DICE는 시작, STOP DICE 주사위멈추기, RETRY는 재시작입니다. <br />
+            NEW GAME 부분에는 누가 게임을 이겼는지 알려줍니다. 
+            </div>
+            </div>
+	</head>
+	<body>
+<hr>
+         <div class="wrapper">
+                <div class = "player1 active" >
+                <div class = "playername">Player1</div>
+				<div class = "pldice"><img id="dice1" src="media/dice1.png" alt = "dice" class ="dice1"></div>
+                <div class = "pldice3"><img id="dice3" src="media/dice3.png" alt = "dice" class ="dice3"></div>
+                <div class = "plpoint active" >    1번 포인트 <input id="pv1" class = "pv1" value="   "/> </div>
+                <div class = "score active" id = "ps1">0승</div>	
+            </div>
+                
+                <div class = "player2">
+                <div class = "playername">Player2</div>
+				<div class = "pldice"><img id="dice2" src="media/dice2.png" alt ="dice" class = "dice2"></div>
+                <div class = "pldice4"><img id="dice4" src="media/dice4.png" alt = "dice" class ="dice4"></div>
+                <div class = "plpoint">    2번 포인트 <input id="pv2" class = "pv2" value="   "/> </div>
+                <div class = "score" id = "ps2">0승</div>
+                </div>
+
+                <audio id="audioContainer">
+                    <source id="audioSource" src="" />
+                    이 브라우저에서는 오디오 포멧을 지원하지않습니다.
+                  </audio>
+                <button onClick="throwdice();" class ="Throw" id = "Throw">Throw dice</button>
+                <button onClick="stop();" class ="Stop">Stop dice </button>
+                <button onCLick="retry();" class ="Retry">Retry</button>
+                <input type = text id="winner" class = "winner" value="New Game"/>
+ 
+
+               
+              </div>
+              <div>
+
+            </div>
+	</body>
+    <script src="main5.js"></script>
+</html>
